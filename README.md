@@ -13,7 +13,7 @@ Gitの基本的なコマンドである `git add` と `git commit` について�
 ### docker container のビルド
 
 ```bash
-$ docker-build -t git-ubuntu .
+$ docker build -t git-ubuntu .
 ```
 
 ### ubuntu イメージの起動
