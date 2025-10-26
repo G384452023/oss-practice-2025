@@ -85,11 +85,11 @@ git log --oneline
 
 表示例：
 ```
-a1b2c3d 自己紹介を追加
+7f9a8b2 自己紹介を追加
 e4f5g6h 初回コミット
 ```
 
-- 左側の文字列（`a1b2c3d`）は「コミットハッシュ」と呼ばれる、コミットを識別するIDです
+- 左側の文字列（`7f9a8b2`）は「コミットハッシュ」と呼ばれる、コミットを識別するIDです
 - 右側はコミットメッセージです
 
 #### `git log -1`
@@ -101,9 +101,9 @@ git log -1
 
 表示例：
 ```
-commit a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0
+commit 7f9a8b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8
 Author: Your Name <your.email@example.com>
-Date:   Sun Oct 26 10:00:00 2025 +0900
+Date:   Mon Oct 26 10:00:00 2025 +0900
 
     自己紹介を追加
 ```
@@ -135,7 +135,7 @@ git cat-file -p コミットハッシュ
 
 例：
 ```bash
-git cat-file -p a1b2c3d
+git cat-file -p 7f9a8b2
 ```
 
 これを実行すると、以下のような情報が見られます：
