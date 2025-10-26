@@ -4,28 +4,26 @@
 この回では、Gitの基本的な操作である `git add` と `git commit` について学びます。
 これらのコマンドを使うことで、自分の作業を記録し、バージョン管理ができるようになります。
 
-## リポジトリの取得方法（git clone とダウンロードの違い）
-GitHubの「Download ZIP」でダウンロードすると、ワーキングツリー（ファイル）は取得できますが、`.git` ディレクトリ（履歴を管理するメタデータ）は含まれません。そのため、リポジトリの履歴やブランチ情報、コミットデータを扱いたい場合は `git clone` を使ってクローンしてください。
+## リポジトリの取得（git clone）
+GitHub上の「Download ZIP」などでファイルをダウンロードすると、リポジトリの履歴やメタデータが入っている `.git` フォルダは含まれません。
+そのため、履歴を取得したり他の人に変更を送ったり（push）するには、`git clone` でリポジトリをクローンしてください。
 
-例：HTTPSでクローンする場合
-
+- HTTPSでクローンする場合（推奨）：
 ```bash
 git clone https://github.com/tomohitoy/oss-practice-2025.git
 ```
 
-例：SSHでクローンする場合（SSHキーを設定している場合）
-
-```bash
-git clone git@github.com:tomohitoy/oss-practice-2025.git
-```
-
-クローン後、chap05のディレクトリに移動して実習を行います：
-
+クローンの後にこの章のファイルに移動する例：
 ```bash
 cd oss-practice-2025/chap05
 ```
 
-ダウンロード（ZIP）の場合は、単にファイルだけが必要なときや履歴を気にしないときに便利です。しかし、ここで学ぶ `.git` に関するコマンド（`git log` や `.git/objects` の確認など）は、クローンしたリポジトリでしか正しく動作しない点に注意してください。
+履歴を全部取らずに最新だけを取得する（帯域を節約したい場合）：
+```bash
+git clone --depth 1 https://github.com/tomohitoy/oss-practice-2025.git
+```
+
+注：Download ZIP は編集して戻す（push）ことができないため、変更をリポジトリに反映させたい場合は必ず `git clone` してください。
 
 ## Gitとは？
 Gitは、ファイルの変更履歴を記録し、管理するためのツールです。
